@@ -13,6 +13,7 @@ INNER JOIN
     Users u ON b.user_id = u.user_id;
 
 -- LEFT JOIN: Properties with their reviews (including properties without reviews)
+-- LEFT JOIN: Properties with their reviews (including properties without reviews)
 SELECT 
     p.property_id,
     p.title,
@@ -23,7 +24,10 @@ SELECT
 FROM 
     Properties p
 LEFT JOIN 
-    Reviews r ON p.property_id = r.property_id;
+    Reviews r ON p.property_id = r.property_id
+ORDER BY 
+    p.property_id;
+
 
 -- FULL OUTER JOIN: All users and all bookings (even if unmatched)
 SELECT 
