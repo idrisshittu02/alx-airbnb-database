@@ -1,4 +1,5 @@
 -- Initial complex query to retrieve all booking info
+-- Initial complex query to retrieve all booking info
 SELECT 
     b.booking_id,
     b.start_date,
@@ -19,7 +20,10 @@ JOIN
 JOIN 
     Properties p ON b.property_id = p.property_id
 JOIN 
-    Payments pay ON b.booking_id = pay.booking_id;
+    Payments pay ON b.booking_id = pay.booking_id
+WHERE 
+    pay.status = 'completed';
+
 EXPLAIN ANALYZE
 -- (Paste the query here)
 -- Optimized query using only needed fields and assuming indexes exist
