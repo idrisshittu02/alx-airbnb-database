@@ -27,3 +27,17 @@ This file contains examples of SQL subqueries used in the Airbnb project.
 
 -   **Purpose:** Find users who made more than 3 bookings
 -   **How it works:** Uses a subquery that references the outer query (`b.user_id = u.user_id`) to count bookings per user
+
+# SQL Aggregations and Window Functions – Airbnb Clone Project
+
+This file contains SQL queries using aggregation functions and window functions to analyze Airbnb data.
+
+## 📊 Total Bookings per User
+
+-   **Query:** Counts how many bookings each user has made.
+-   **Techniques:** `COUNT()`, `GROUP BY`, `JOIN`
+
+## 🏆 Property Ranking by Bookings
+
+-   **Query:** Ranks properties based on how many bookings they received.
+-   **Techniques:** `COUNT()`, `RANK() OVER (ORDER BY ...)`, `GROUP BY`
