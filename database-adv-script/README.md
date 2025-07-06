@@ -13,3 +13,17 @@ Returns all properties and their associated reviews. If a property has no review
 ## 🔄 FULL OUTER JOIN – All Users and Bookings
 
 Returns all users and all bookings, whether or not they are linked to each other. Useful for spotting unmatched entries.
+
+# SQL Subqueries – Airbnb Clone Project
+
+This file contains examples of SQL subqueries used in the Airbnb project.
+
+## 🔍 Non-Correlated Subquery
+
+-   **Purpose:** Find properties with an average rating above 4.0
+-   **How it works:** Uses a subquery with `GROUP BY` and `HAVING` to filter properties based on review ratings
+
+## 🔁 Correlated Subquery
+
+-   **Purpose:** Find users who made more than 3 bookings
+-   **How it works:** Uses a subquery that references the outer query (`b.user_id = u.user_id`) to count bookings per user
