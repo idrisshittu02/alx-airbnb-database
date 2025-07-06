@@ -22,7 +22,9 @@ JOIN
 JOIN 
     Payments pay ON b.booking_id = pay.booking_id
 WHERE 
-    pay.status = 'completed';
+    pay.status = 'completed'
+    AND p.location = 'Lagos';
+
 
 EXPLAIN ANALYZE
 -- (Paste the query here)
